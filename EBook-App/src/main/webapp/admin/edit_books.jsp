@@ -49,7 +49,7 @@ a:hover {
 						%>
 
 						<form action="../editbooks" method="post"
-							enctype="multipart/form-data">
+						<input type="hidden" name="id" value="<%=b.getBookId() %>">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Book Name</label> <input
 									name="bname" type="text" class="form-control"
