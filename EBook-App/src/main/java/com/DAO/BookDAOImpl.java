@@ -115,5 +115,19 @@ public class BookDAOImpl implements BookDAO {
 		}
 		return f;
 	}
+	
+	public boolean deleteBooks(int id) {
+		boolean f=false;
+		try {
+			String sql = "delete from book_dtls where bookId=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			int i=ps.executeUpdate();
+			if(i==1) f=true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return f;
+	}
 
 }
