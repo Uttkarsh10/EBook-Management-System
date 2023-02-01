@@ -15,6 +15,11 @@
 </head>
 <body>
 	<%@include file="navbar.jsp"%>
+	<!-- If user is logged out and then by changing the url the home page can be accessed so to secure it we use the below code -->
+	<c:if test="${empty userobj }">
+		<c:redirect url="../login.jsp" />
+	</c:if>
+	<!-- Secured code ends here -->
 	<h3 class="text-center">Hello Admin</h3>
 	<c:if test="${not empty succMsg }">
 		<h5 class="text-center text-success">${succMsg}</h5>
@@ -55,8 +60,8 @@
 				<td><%=b.getBookCategory()%></td>
 				<td><%=b.getStatus()%></td>
 				<td><a href="edit_books.jsp?id=<%=b.getBookId()%>"
-					class="btn btn-sm btn-primary">Edit</a> <a href="../delete?id=<%=b.getBookId()%>"
-					class="btn btn-sm btn-danger">Delete</a></td>
+					class="btn btn-sm btn-primary"><i class="fa-solid fa-pen-to-square"></i> Edit</a> <a href="../delete?id=<%=b.getBookId()%>"
+					class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i> Delete</a></td>
 			</tr>
 			<%
 			}
