@@ -40,12 +40,12 @@ public class EditBooksServlet extends HttpServlet{
 			
 			if(f) {
 				session.setAttribute("succMsg", "Book Updated Successfully");
-				resp.sendRedirect("all_books.jsp");
+				resp.sendRedirect("admin/all_books.jsp");
 			}
 			
 			else {
 				session.setAttribute("failedMsg", "Something wrong on server");
-				resp.sendRedirect("all_books.jsp");
+				resp.sendRedirect("admin/all_books.jsp");
 			}
 			
 		} catch (Exception e) {
