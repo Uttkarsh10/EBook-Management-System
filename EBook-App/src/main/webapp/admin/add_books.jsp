@@ -22,6 +22,11 @@ a:hover {
 </head>
 <body style="background-color: #f0f2f2;">
 	<%@include file="navbar.jsp"%>
+	<!-- If user is logged out and then by changing the url the home page can be accessed so to secure it we use the below code -->
+	<c:if test="${empty userobj }">
+		<c:redirect url="../login.jsp" />
+	</c:if>
+	<!-- Secured code ends here -->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
