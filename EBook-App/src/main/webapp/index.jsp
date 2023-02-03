@@ -1,3 +1,5 @@
+<%@page import="com.entity.user"%>
+<%@page import="com.DAO.UserDAO"%>
 <%@page import="com.entity.BookDtls"%>
 <%@page import="java.util.List"%>
 <%@page import="com.DB.DBConnect"%>
@@ -27,6 +29,10 @@
 </style>
 </head>
 <body style="background-color: #f7f7f7;">
+
+	<%
+	user u = (user) session.getAttribute("userobj");
+	%>
 	<%@ include file="allComponent/navbar.jsp"%>
 	<div class="container-fluid back-img">
 		<h2 class="text-center text-danger">Ebook Management System</h2>
@@ -56,7 +62,7 @@
 							Categories:
 							<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="view_books.jsp?bid=<%=b.getBookId() %>"
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
 								class="btn btn-success btn-sm ml-5">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
@@ -66,9 +72,22 @@
 						Categories:
 						<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="" class="btn btn-danger btn-sm ml-1"><i
-								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
-								href="view_books.jsp?bid=<%= b.getBookId() %>"
+
+							<%
+							if (u == null) {
+							%>
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-2"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a>
+							<%
+							} else {
+							%>
+							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
+								class="btn btn-danger btn-sm ml-2"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a>
+							<%
+							}
+							%>
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
 								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-0"><%=b.getPrice()%></a>
 						</div>
@@ -113,9 +132,23 @@
 							Categories:
 							<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="" class="btn btn-danger btn-sm ml-2"><i
-								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
-								href="view_books.jsp?bid=<%=b.getBookId() %>"
+
+							<%
+							if (u == null) {
+							%>
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-2"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a>
+							<%
+							} else {
+							%>
+							<a href="cart?bid=<%=b.getBookId()%>&&uid=<%=u.getId()%>"
+								class="btn btn-danger btn-sm ml-2"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a>
+							<%
+							}
+							%>
+
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
 								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
@@ -156,8 +189,9 @@
 							Categories:
 							<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="view_books.jsp?bid=<%=b.getBookId() %>" class="btn btn-success btn-sm ml-5">View Details</a> <a
-								href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>"
+								class="btn btn-success btn-sm ml-5">View Details</a> <a href=""
+								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 					</div>
 				</div>
