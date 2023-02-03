@@ -56,8 +56,9 @@
 							Categories:
 							<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="" class="btn btn-success btn-sm ml-5">View Details</a> <a
-								href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+							<a href="view_books.jsp?bid=<%=b.getBookId() %>"
+								class="btn btn-success btn-sm ml-5">View Details</a> <a href=""
+								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 						<%
 						} else {
@@ -66,7 +67,8 @@
 						<%=b.getBookCategory()%></p>
 						<div class="row">
 							<a href="" class="btn btn-danger btn-sm ml-1"><i
-								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a href=""
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_books.jsp?bid=<%= b.getBookId() %>"
 								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-0"><%=b.getPrice()%></a>
 						</div>
@@ -83,7 +85,8 @@
 	</div>
 
 	<div class="text-center mt-1">
-		<a href="all_recent_book.jsp" class="btn btn-danger btn-sm">View All</a>
+		<a href="all_recent_book.jsp" class="btn btn-danger btn-sm">View
+			All</a>
 	</div>
 
 	<!-- Recent Book Ends here -->
@@ -111,7 +114,8 @@
 							<%=b.getBookCategory()%></p>
 						<div class="row">
 							<a href="" class="btn btn-danger btn-sm ml-2"><i
-								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a href=""
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_books.jsp?bid=<%=b.getBookId() %>"
 								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
@@ -144,7 +148,7 @@
 			<div class="col-md-3">
 				<div class="card crd-ho">
 					<div class="card-body text-center">
-						<img alt="" src="Book/<%=b.getPhotoName() %>"
+						<img alt="" src="Book/<%=b.getPhotoName()%>"
 							style="width: 150px; height: 200px" class="img-thumblin">
 						<p><%=b.getBookName()%></p>
 						<p><%=b.getAuthor()%></p>
@@ -152,8 +156,8 @@
 							Categories:
 							<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="" class="btn btn-success btn-sm ml-5">View Details</a> <a
-								href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice() %></a>
+							<a href="view_books.jsp?bid=<%=b.getBookId() %>" class="btn btn-success btn-sm ml-5">View Details</a> <a
+								href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 					</div>
 				</div>
