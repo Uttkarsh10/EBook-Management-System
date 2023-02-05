@@ -79,7 +79,6 @@ to {
 		    },2000)
 		}	
 </script>
-<!--Scope--!>
 <c:remove var="addCart" scope="session"/>
 </c:if>
 
