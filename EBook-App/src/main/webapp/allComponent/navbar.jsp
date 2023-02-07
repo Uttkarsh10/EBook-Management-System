@@ -19,6 +19,8 @@
 
 		<c:if test="${not empty userobj}">
 			<div class="col-md-3">
+			
+			<a href="checkout.jsp"><i class="fa-sharp fa-solid fa-cart-plus fa-2x"></i></a>
 				<a href="login.jsp" class="btn btn-success"><i
 					class="fa-solid fa-user-plus"></i> ${userobj.name}</a> 
 					<a href="logout" class="btn btn-primary text-white"><i
