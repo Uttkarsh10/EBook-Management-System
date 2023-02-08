@@ -36,10 +36,9 @@
 							Categories:
 							<%=b.getBookCategory()%></p>
 						<div class="row">
-							<a href="" class="btn btn-danger btn-sm ml-2"><i
-								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a href=""
-								class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
-								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
+							<a href="view_books.jsp?bid=<%=b.getBookId()%>" 
+							 class="btn btn-success btn-sm ml-5">View Details</a> 
+							<a href="" class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 					</div>
 				</div>
