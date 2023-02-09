@@ -29,7 +29,7 @@
 	</c:if>
 
 	<c:if test="${not empty failedMsg }">
-		<div class="alert alert-danger" role="alert">
+		<div class="alert alert-danger text-center" role="alert">
 			${failedMsg }
 			<c:remove var="failedMsg" scope="session" />
 		</div>
@@ -90,55 +90,56 @@
 				<div class="card">
 					<div class="card-body">
 						<h3 class="text-center text-success">Your Details for Order</h3>
-						<form>
+						<form action="order" method="post">
+						<input type="hidden" value="${userobj.id }" name="id">
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Name</label> <input type="text"
-										class="form-control" id="inputEmail4" value="<%=u.getName()%>" readonly="readonly">
+										class="form-control" id="inputEmail4" value="<%=u.getName()%>" name="username">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Email</label> <input type="email"
-										class="form-control" id="inputPassword4" value="<%=u.getEmail()%>" readonly="readonly">
+										class="form-control" id="inputPassword4" value="<%=u.getEmail()%>" name="email">
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Phone No</label> <input type="number"
-										class="form-control" id="inputEmail4" value="<%=u.getPhno()%>" readonly="readonly">
+										class="form-control" id="inputEmail4" value="<%=u.getPhno()%>" name="phno">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Address</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="address">
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Landmark</label> <input type="text"
-										class="form-control" id="inputEmail4">
+										class="form-control" id="inputEmail4" name="landmark">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">City</label> <input type="text"
-										class="form-control" id="inputPassword4">
+										class="form-control" id="inputPassword4" name="city">
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">State</label> <input type="text"
-										class="form-control" id="inputEmail4">
+										class="form-control" id="inputEmail4" name="state">
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Pin Code</label> <input
-										type="number" class="form-control" id="inputPassword4">
+										type="number" class="form-control" id="inputPassword4" name="pincode">
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label>Payment Type</label> <select class="form-control">
-									<option>------Select------</option>
-									<option>Cash on Delivery</option>
+								<label>Payment Type</label> <select class="form-control" name="payment">
+									<option value="noselect">------Select------</option>
+									<option value="COD">Cash on Delivery</option>
 								</select>
 							</div>
 
