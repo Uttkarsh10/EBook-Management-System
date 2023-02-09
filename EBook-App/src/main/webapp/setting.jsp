@@ -62,29 +62,14 @@ a:hover {
 							<div class="text-primary">
 								<i class="fas fa-edit fa-3x"></i>
 							</div>
-							<h3>Login & Security (Edit Profile)</h3>
+							<h3>Edit Profile</h3>
 						</div>
 					</div>
 				</a>
 			</div>
 
 
-			<div class="col-md-4 mt-3">
-				<a href="user_address.jsp">
-					<div class="card">
-						<div class="card-body text-center">
-							<div class="text-warning">
-								<i class="fas fa-map-marker-alt fa-3x"></i>
-							</div>
-							<h3>Your Address</h3>
-							<p>Edit Address</p>
-						</div>
-					</div>
-				</a>
-			</div>
-
-
-			<div class="col-md-4 mt-3">
+			<div class="col-md-6 mt-3">
 				<a href="order.jsp">
 					<div class="card">
 						<div class="card-body text-center">
@@ -99,7 +84,7 @@ a:hover {
 			</div>
 
 
-			<div class="col-md-4 mt-3">
+			<div class="col-md-6 mt-3">
 				<a href="helpline.jsp">
 					<div class="card">
 						<div class="card-body text-center">
