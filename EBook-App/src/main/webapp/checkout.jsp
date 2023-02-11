@@ -95,44 +95,44 @@
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Name</label> <input type="text"
-										class="form-control" id="inputEmail4" value="<%=u.getName()%>" name="username">
+										class="form-control" id="inputEmail4" value="<%=u.getName()%>" name="username" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Email</label> <input type="email"
-										class="form-control" id="inputPassword4" value="<%=u.getEmail()%>" name="email">
+										class="form-control" id="inputPassword4" value="<%=u.getEmail()%>" name="email" required>
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Phone No</label> <input type="number"
-										class="form-control" id="inputEmail4" value="<%=u.getPhno()%>" name="phno">
+										class="form-control" id="inputEmail4" value="<%=u.getPhno()%>" name="phno" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Address</label> <input type="text"
-										class="form-control" id="inputPassword4" name="address">
+										class="form-control" id="inputPassword4" name="address" required>
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">Landmark</label> <input type="text"
-										class="form-control" id="inputEmail4" name="landmark">
+										class="form-control" id="inputEmail4" name="landmark" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">City</label> <input type="text"
-										class="form-control" id="inputPassword4" name="city">
+										class="form-control" id="inputPassword4" name="city" required>
 								</div>
 							</div>
 
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="inputEmail4">State</label> <input type="text"
-										class="form-control" id="inputEmail4" name="state">
+										class="form-control" id="inputEmail4" name="state" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="inputPassword4">Pin Code</label> <input
-										type="number" class="form-control" id="inputPassword4" name="pincode">
+										type="number" class="form-control" id="inputPassword4" name="pincode" required>
 								</div>
 							</div>
 
