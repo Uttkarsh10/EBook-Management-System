@@ -16,7 +16,7 @@
 	<h2>Your Order is Successfully Placed</h2>
 	<h5>Product will be Delivered in 7 Days</h5>
 	<a href="index.jsp" class="btn btn-primary mt-3">Home</a>
-	<a href = "user_order.jsp" class="btn btn-danger mt-3">View Order</a>
+	<a href = "order.jsp" class="btn btn-danger mt-3">View Order</a>
 	</div>
 </body>
 </html>
