@@ -79,6 +79,7 @@ to {
 		    },2000)
 		}	
 </script>
+
 <c:remove var="addCart" scope="session"/>
 </c:if>
 
@@ -117,7 +118,7 @@ to {
 							}
 							%>
 							
-							 <a href="" class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
+							 <a href="view_books.jsp?bid=<%=b.getBookId()%>" class="btn btn-success btn-sm ml-1">View Details</a> <a href=""
 								class="btn btn-danger btn-sm ml-1"><%=b.getPrice()%></a>
 						</div>
 					</div>
